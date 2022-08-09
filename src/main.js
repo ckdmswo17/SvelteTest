@@ -1,10 +1,10 @@
 import './global.css';
 
-import Hey from './Hey.svelte';
+import App from './App.svelte';
 
 
-const hey = new Hey({
-	target: document.querySelector("#hey"),
+const app = new App({
+	target: document.body,
 });
 
-export default hey;
+export default app;
