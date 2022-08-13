@@ -1,20 +1,20 @@
 <script>
-    let inputId = "ckdmswo17"
+    let inputId = "cha6217"
     let inputPw = "1234"
  
 	// login 버튼 클릭 이벤트
     let onClickLogin = () => {
-        fetch("https://localhost:8888/users",{
+        fetch("http://localhost:3000/users",{
             method : "POST",
+            mode : "no-cors",
             body : JSON.stringify({
                 id : inputId,
                 password : inputPw,
             })
         })
-        .then(res => res.json())
         .then(res => {
         console.log(res)
-        localStorage.setItem('access-token',res.access_token)
+        // localStorage.setItem('access-token',res.access_token)
         });
     }
 </script>
